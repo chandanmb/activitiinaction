@@ -3,13 +3,13 @@
   <process id="serviceProcess" name="Service Process" isExecutable="true">
     <startEvent id="sid-AC09E52C-390C-4A7D-8050-DF3BE49CC303" name="Start"></startEvent>
     <sequenceFlow id="sid-2B58AA0D-4C90-4ED6-B3D9-911E1FFA889A" sourceRef="sid-AC09E52C-390C-4A7D-8050-DF3BE49CC303" targetRef="st1"></sequenceFlow>
-    <serviceTask id="st1" name="Service Task 1" activiti:async="true" activiti:exclusive="false" activiti:class="com.activiti.Task1">
+    <serviceTask id="st1" name="Service Task 1" activiti:async="true" activiti:exclusive="false" activiti:class="org.activiti.Task1">
       <extensionElements>
         <activiti:executionListener event="take" class="com.activiti.Task1"></activiti:executionListener>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="sid-763EF9E9-45C1-4561-B816-5AB08709342A" sourceRef="st1" targetRef="st2"></sequenceFlow>
-    <serviceTask id="st2" name="Service Task 2" activiti:class="com.activiti.Task2"></serviceTask>
+    <serviceTask id="st2" name="Service Task 2" activiti:class="org.activiti.Task2"></serviceTask>
     <endEvent id="sid-1D1CCF68-9164-495D-B6D1-B9FBC0E0EE3E" name="End"></endEvent>
     <sequenceFlow id="sid-14B746F1-9555-494D-B513-4024CF3EE196" sourceRef="st2" targetRef="sid-1D1CCF68-9164-495D-B6D1-B9FBC0E0EE3E"></sequenceFlow>
   </process>
